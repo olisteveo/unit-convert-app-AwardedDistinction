@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         calculate();
     }
 
+
     private void calculate() {
         String sourceUnit = fromUnits.getSelectedItem().toString();
         String targetUnit = toUnits.getSelectedItem().toString();
