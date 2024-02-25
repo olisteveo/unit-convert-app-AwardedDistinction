@@ -17,9 +17,9 @@ public class OldActivity extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_old);
-        TextView main = (TextView) findViewById(R.id.TextView_Main);
+        TextView main = (TextView) findViewById(R.id.txtCalcResult);
         ImageView pic = (ImageView) findViewById(R.id.imageView);
-        Button btnRoll = (Button) findViewById(R.id.btnRoll);
+        Button btnRoll = (Button) findViewById(R.id.btnCalculate);
         btnRoll.setOnClickListener(this);
         generate(main, pic);
         //main.append(scoreText(mark));
@@ -27,7 +27,7 @@ public class OldActivity extends AppCompatActivity implements View.OnClickListen
     }
     @Override
     public void onClick(View view) {
-        TextView main = (TextView) findViewById(R.id.TextView_Main);
+        TextView main = (TextView) findViewById(R.id.txtCalcResult);
         ImageView pic = (ImageView) findViewById(R.id.imageView);
         generate(main, pic);
     }
