@@ -15,6 +15,7 @@ import com.example.myapp.Convertor.Factory;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    // UI elements
     EditText sourceInput;
     TextView sourceLabel;
     Spinner fromUnits;
@@ -44,45 +45,44 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        // Handle all button clicks
         if (view.getId() == R.id.btnCalculate) {
-            calculate();
+            calculate(); // Call calculate method
         } else if (view.getId() == R.id.switchUnitButton) {
-            switchUnits();
+            switchUnits(); // Call switchUnits method
         } else if (view.getId() == R.id.clearButton) {
-            clear();
+            clear(); // Call clear method
         }
     }
 
-
+    // Method to switch the selected units in the spinners
     private void switchUnits() {
-        // Swap selected units in spinners
         int unit1Index = fromUnits.getSelectedItemPosition();
         int unit2Index = toUnits.getSelectedItemPosition();
         fromUnits.setSelection(unit2Index);
         toUnits.setSelection(unit1Index);
-        calculate();
+        calculate(); // Recalculate after switching units
     }
 
-
+    // Method to calculate conversion
     private void calculate() {
         String sourceUnit = fromUnits.getSelectedItem().toString();
         String targetUnit = toUnits.getSelectedItem().toString();
         String inputText = sourceInput.getText().toString();
 
-
         if (!inputText.isEmpty()) {
             double inputValue = Double.parseDouble(inputText);
-//            double result = determineConversion(inputValue, fromUnits.getSelectedItemPosition(), toUnits.getSelectedItemPosition());
             double result = Factory.convert(inputValue, fromUnits.getSelectedItem().toString(), toUnits.getSelectedItem().toString());
-            sourceLabel.setText(String.valueOf(result));
+            String formattedResult = String.format("%.4f", result); // Limiting to 4 decimal places
+            sourceLabel.setText(formattedResult); // Update result text
         } else {
             sourceLabel.setText("Enter a value");
         }
     }
 
+    // Method to clear input value and result
     private void clear() {
-        // Clear input value and result
-        sourceInput.setText("");
-        sourceLabel.setText("");
+        sourceInput.setText(""); // Clear input field
+        sourceLabel.setText(""); // Clear result field
     }
 }
