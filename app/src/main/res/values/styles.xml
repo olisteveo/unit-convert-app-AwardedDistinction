@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">@color/primary_text_color</item>
+        <item name="colorPrimaryDark">@color/primary_text_color</item>
+        <item name="colorAccent">@color/accent_color</item>
+    </style>
+
+    <!-- Custom spinner style -->
+    <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/custom_spinner_background</item>
+    </style>
+
+    <!-- Custom switch button style -->
+    <style name="SwitchButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/custom_switch_background</item>
+        <item name="android:textColor">@color/switch_text_color</item>
+    </style>
+</resources>

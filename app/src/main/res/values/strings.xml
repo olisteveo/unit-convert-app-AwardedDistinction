@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Unit Convert</string>
+
+    <string name="Millimeters">Millimeters</string>
+    <string name="Centimeters">Centimeters</string>
+    <string name="Meters">Meters</string>
+    <string name="Miles">Miles</string>
+    <string name="Feet">Feet</string>
+
+    <string-array name="unitArray">
+        <item>@string/Millimeters</item>
+        <item>@string/Centimeters</item>
+        <item>@string/Meters</item>
+        <item>@string/Miles</item>
+        <item>@string/Feet</item>
+    </string-array>
+</resources>
